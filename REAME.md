@@ -1,4 +1,6 @@
-解决隐藏 wrangler.toml 文件值的问题,
+解决隐藏 wrangler.toml 文件值的问题
+注意：环境变量只能通过 wrangler.toml 在[vars]下方定义的变量和值才能在 wrangler deploy 时部署到 cloudflare 上去。
+如果定义在其它部分无法上传到 cloudflare 上。
 要将 config.toml 中的变量替换结果注入到 wrangler.toml，
 可以使用 envsubst 工具进行预处理。以下是详细步骤：
 
