@@ -1,0 +1,8 @@
+
+account_id = "${ACCOUNT_ID}"
+compatibility_date = "${COMPATIBILITY_DATE}"
+main = "src/index.js"
+name = "${WORKER_NAME}"
+workers_dev = true
+[vars]
+ACCOUNT_ID = "${ACCOUNT_ID}"
