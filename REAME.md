@@ -1,4 +1,5 @@
-解决隐藏 wrangler.toml 文件值的问题
+# 解决隐藏 wrangler.toml 文件值的问题
+
 注意：环境变量只能通过 wrangler.toml 在[vars]下方定义的变量和值才能在 wrangler deploy 时部署到 cloudflare 上去。
 如果定义在其它部分无法上传到 cloudflare 上。
 要将 config.toml 中的变量替换结果注入到 wrangler.toml，
@@ -13,9 +14,9 @@ bash
 sudo apt-get install gettext
 自动生成 wrangler.toml,键入如下命令：
 
-# source ~/.bashrc
+ source ~/.bashrc
 
-# envsubst < wrangler.template.toml > wrangler.toml
+ envsubst < wrangler.template.toml > wrangler.toml
 
 是的，您可以通过将环境变量存储在文件中，然后使用 envsubst 工具将这些变量注入到 wrangler.toml 文件中。以下是详细步骤：
 
@@ -56,11 +57,11 @@ DB_PASS = "${DB_PASS}"
 bash
 复制代码
 
-# 加载环境变量
+加载环境变量
 
 source env_vars.sh
 
-# 使用 envsubst 进行替换并生成 wrangler.toml
+ 使用 envsubst 进行替换并生成 wrangler.toml
 
 envsubst < wrangler.template.toml > wrangler.toml
 这将创建一个包含实际配置的 wrangler.toml 文件，其中模板中的占位符已被替换为 env_vars.sh 中定义的环境变量值。
@@ -79,7 +80,7 @@ envsubst < wrangler.template.toml > wrangler.toml
 
 You said:
 
-# 使用 envsubst 进行替换并生成 wrangler.toml
+ 使用 envsubst 进行替换并生成 wrangler.toml
 
 envsubst < wrangler.template.toml > wrangler.toml
 解释上面命令的流程
