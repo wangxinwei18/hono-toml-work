@@ -1,4 +1,6 @@
 # 解决隐藏 wrangler.toml 文件值的问题
+首次运行 wrangler deploy
+export CLOUDFLARE_ACCOUNT_ID="d43b8b995376752be4e89c53c33b83ec"
 
 注意：环境变量只能通过 wrangler.toml 在[vars]下方定义的变量和值才能在 wrangler deploy 时部署到 cloudflare 上去。
 如果定义在其它部分无法上传到 cloudflare 上。
